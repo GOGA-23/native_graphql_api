@@ -8,6 +8,7 @@ const resolvers = require("./graphql/resolvers");
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  cache: "bounded"
 });
 
 server.listen({ port }, () => {
